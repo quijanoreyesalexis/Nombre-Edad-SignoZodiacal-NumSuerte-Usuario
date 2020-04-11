@@ -1,0 +1,2 @@
+# Nombre-Edad-SignoZodiacal-NumSuerte-Usuario
+Desarrollar un algoritmo que pida el nombre del usuario, el día, mes y año actual y el día, mes y año de nacimiento del usuario. En base a esos datos el algoritmo indica el signo zodiacal, la edad en horas y segundos y número de suerte del usuario. El número de suerte se calcula sumando los dígitos de su año de nacimiento, si el número es mayor a nueve se resta nueve de manera que el valor esté entre 1 y 91. 
