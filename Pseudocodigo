@@ -1,0 +1,74 @@
+//Pseudocodigo
+
+SubProceso Zodiaco(ndia,nmes)
+	Si (ndia>=21 Y nmes = 3) O (ndia<=20 Y nmes = 4) Entonces
+		Escribir "Aries";
+	FinSi
+	Si (ndia>=24 Y nmes = 9) O (ndia<=23 Y nmes = 10) Entonces
+		Escribir "Libra";
+	FinSi
+	Si (ndia>=21 Y nmes = 4) O (ndia<=21 Y nmes = 5) Entonces
+		Escribir "Tauro";
+	FinSi
+	Si (ndia>=24 Y nmes = 10) O (ndia<=22 Y nmes = 11) Entonces
+		Escribir "Escorpio";
+	FinSi
+	Si (ndia>=22 Y nmes = 5) O (ndia<=21 Y nmes = 6) Entonces
+		Escribir "Géminis";
+	FinSi
+	Si (ndia>=23 Y nmes = 11) O (ndia<=21 Y nmes = 12) Entonces
+		Escribir "Sagitario";
+	FinSi
+	Si (ndia>=21 Y nmes = 6) O (ndia<=23 Y nmes = 7) Entonces
+		Escribir "Cáncer";
+	FinSi
+	Si (ndia>=22 Y nmes = 12) O (ndia<=20 Y nmes = 1) Entonces
+		Escribir "Capricornio";
+	FinSi
+	Si (ndia>=24 Y nmes = 7) O (ndia<=23 Y nmes = 8) Entonces
+		Escribir "Leo";
+	FinSi
+	Si (ndia>=21 Y nmes = 1) O (ndia<=19 Y nmes = 2) Entonces
+		Escribir "Acuario";
+	FinSi
+	Si (ndia>=24 Y nmes = 8) O (ndia<=23 Y nmes = 9) Entonces
+		Escribir "Virgo";
+	FinSi
+	Si (ndia>=20 Y nmes = 2) O (ndia<=20 Y nmes = 3) Entonces
+		Escribir "Piscis";
+	FinSi
+FinSubProceso
+
+Algoritmo DatosDelUsuario
+	
+	Definir nombre,tnanio Como Caracter;
+	Definir dia,ndia,edad,hora,mes,nmes,anio,nanio,x,l,nsuerte,segundos Como Entero;
+	
+	Escribir Sin Saltar "Ingrese su nombre          : ";
+	Leer nombre;
+	Escribir Sin Saltar "Ingrese dia actual         : ";
+	Leer dia;
+	Escribir Sin Saltar "Ingrese mes actual         : ";
+	Leer mes;
+	Escribir Sin Saltar "Ingrese anio actual        : ";
+	Leer anio;
+	Escribir Sin Saltar "Ingrese dia de nacimiento  : ";
+	leer ndia;
+	Escribir Sin Saltar "Ingrese mes de nacimiento  : ";
+	Leer nmes;
+	Escribir Sin Saltar "Ingrese anio de nacimiento : ";
+	Leer nanio;
+	Escribir sin saltar "Su signo del zodiaco es : ";
+	Zodiaco(ndia,nmes);
+	edad <-anio-nanio;
+	hora <- 8765*edad;
+	segundos <- 31536000*edad;
+	Escribir "La edad en horas y segundos de ",nombre," es : ",hora," horas y ",segundos," segundos";
+	tnanio<-convertiratexto(nanio);
+	l<-longitud(tnanio);
+	Para x<-1 Hasta l Con Paso 1 Hacer
+		nsuerte<-nsuerte+convertiranumero(subcadena(tnanio,x,x));
+	Fin Para
+	Escribir "Numero de la suerte es : ",nsuerte;
+	
+FinProceso
