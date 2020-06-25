@@ -1,0 +1,117 @@
+//Programa para imprimir texto
+
+#include<iostream> 
+//Permite imprimir datos en pantalla
+#include<conio.h>  
+/*Con esta libreria, el programa necesitara
+que presionemos cualquier tecla para finalizar
+el programa*/
+
+using namespace std; // Permite utilizar el "cout" y "cin" que son las funciones
+                     //de entrada y salida.
+
+//Declaracion adelantadas de las funciones
+void zodiaco (float ndia, float nmes);
+
+void zodiaco (float ndia, float nmes) { //Funcion que no devuelve nada
+	//Condicionales de los Signos:
+	if ((ndia>=21 && nmes==3) || (ndia<=20 && nmes==4)) 
+		cout << "Aries" << endl;
+	
+	else if ((ndia>=24 && nmes==9) || (ndia<=23 && nmes==10)) 
+		cout << "Libra" << endl;
+	
+	else if ((ndia>=21 && nmes==4) || (ndia<=21 && nmes==5)) 
+		cout << "Tauro" << endl;
+	
+	else if ((ndia>=24 && nmes==10) || (ndia<=22 && nmes==11)) 
+		cout << "Escorpio" << endl;
+	
+	else if ((ndia>=22 && nmes==5) || (ndia<=21 && nmes==6)) 
+		cout << "Géminis" << endl;
+	
+	else if ((ndia>=23 && nmes==11) || (ndia<=21 && nmes==12)) 
+		cout << "Sagitario" << endl;
+	
+	else if ((ndia>=21 && nmes==6) || (ndia<=23 && nmes==7)) 
+		cout << "Cáncer" << endl;
+	
+	else if ((ndia>=22 && nmes==12) || (ndia<=20 && nmes==1)) 
+		cout << "Capricornio" << endl;
+	
+	else if ((ndia>=24 && nmes==7) || (ndia<=23 && nmes==8)) 
+		cout << "Leo" << endl;
+	
+	else if ((ndia>=21 && nmes==1) || (ndia<=19 && nmes==2)) 
+		cout << "Acuario" << endl;
+	
+	else if ((ndia>=24 && nmes==8) || (ndia<=23 && nmes==9)) 
+		cout << "Virgo" << endl;
+	
+	else if ((ndia>=20 && nmes==2) || (ndia<=20 && nmes==3)) 
+		cout << "Piscis" << endl;
+	
+	
+}
+
+//La funcion main comienza la ejecucion del programa
+int main(){
+	//Declaracion de variables:
+	int edad,dia,mes,anio,ndia,nmes,nanio,tanio,nsuerte,hora,segundos = 0; //Tipo Entero
+	char nombre[50];                           //Tipo Caracter
+	
+	cout << "Ingrese su Nombre: ";cin>>nombre;//Pide los datos del usuario
+	
+	cout << "Ingrese el dia actual: ";cin>>dia;
+	//Ciclo para evitar el ingreso de un dia invalido:
+	while (dia >= 32 || dia <= 0);
+	{
+		cout << "Introduzca un dia valido: ";cin>>dia;
+	}
+	
+	cout << "Ingrese el mes actual: ";cin>>mes;
+	//Ciclo para evitar el ingreso de un mes invalido:
+	while (mes >=13 || mes <= 0);
+	{
+		cout << "Introduzca un mes valido: ";cin>>mes;
+	}
+	
+	cout << "Ingrese el anio actual: ";cin>>anio;
+	
+	cout << "Ingrese dia de nacimiento: ";cin>>ndia;
+	//Ciclo para evitar el ingreso de un dia invalido:
+	while (ndia >= 32 || ndia <= 0);
+	{
+		cout << "Introduzca un dia valido: ";cin>>ndia;
+	}
+	
+	cout << "Ingrese mes de nacimiento: ";cin>>nmes;
+	//Ciclo para evitar el ingreso de un mes invalido:
+	while (nmes >=13 || nmes <= 0);
+	{
+		cout << "Introduzca un mes valido: ";cin>>nmes;
+	}
+	
+	cout << "Ingrese anio de nacimiento: ";cin>>nanio;
+	
+	cout << "Su Signo Zodiacal es: ";zodiaco(ndia,nmes);
+	
+	edad = anio,nanio;
+	hora = 8765 * edad;
+	segundos = 31536000 * edad;
+	
+	cout << "La edad en horas y segundos de: " << nombre << " es " << hora << " horas y " << segundos << " segundos. " << endl;
+	
+	tanio = nanio;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	getch();
+	return 0;
+}
